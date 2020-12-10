@@ -1,0 +1,145 @@
+body {
+    background: white;
+    color: #323232;
+    margin: 0 auto;
+    height: 100vh;
+    text-align: center;
+    font-family: Helvetica neue, roboto;
+  }
+
+  header {
+    position: relative;
+    width: 163px;
+    margin: 15px auto;
+  }
+ 
+  
+  #users-list {
+    padding: 0 12px;
+  }
+
+  #user-container {
+    margin: 0 auto;
+    
+  }
+
+  .user-text-container {
+    margin-left: 10px;
+    margin-bottom: 25px;
+  }
+
+  #user-container .Male,
+  #user-container .Female {
+    transition: .2s all;
+    margin-bottom: 12px;
+    opacity: .8;
+ 
+    margin: 0 auto;
+    width: 25%;
+    display: inline-block;
+
+    align-items: center;
+
+    animation-name: pop;
+    animation-duration: .75s;
+ 
+  }
+
+p {
+    margin: 0;
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+
+  #user-container .Male:hover,
+  #user-container .Female:hover {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+
+  #user-container img {
+    width: 54px;
+    height: 54px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+
+  .user-text-container {
+    margin-left: 10px;
+    margin-bottom: 25px;
+  }
+  .user-text-container p {
+    font-size: 14px;
+  }
+  .user-text-container label {
+    margin: 0;
+    font-size: 11px;
+    color: #333;
+  }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  margin: 25px;
+}
+
+@keyframes pop {
+  0% {opacity : 0}
+  100% {opacity: .8}
+}
+
+#search {
+  border-radius: 25px;
+  padding: 6px;
+  display: block;
+  margin: 0 auto;
+  outline: hidden;
+  border: 1px solid red;
+}
+
+#search:focus {
+  outline: none;
+}
+
+#btn {
+  padding: 6px;
+
+  transition: .2s all;
+  border: 3px solid red;
+  border-bottom-left-radius: 15px;
+  background-color: #fff;
+
+  cursor: pointer;
+  outline: none;
+}
+
+#btn:hover {
+  color: red;
+  border-color: black;
+}
+
+.fa-search:before {
+  bottom: 24.8px;
+  position: absolute;
+  right: 0px;
+  color: red;
+}
+
+@media screen and (max-width: 660px) {
+  #user-container .Male, #user-container .Female {
+    width: 46%;
+  }
+  }
+
+  @media screen and (max-width: 400px) {
+    #user-container .Male, #user-container .Female {
+      width: 80%;
+    }
+    #user-container {
+      padding-left: 0;
+    }
+    }
